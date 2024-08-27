@@ -1,0 +1,126 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Title of your Document}
+\author{EE24BTECH11045-Namala Tapasvi$^{*}$%}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{esami}
+
+\title{Assignment 1}
+\author{Namala Tapasvi}
+
+\begin{document}
+
+\maketitle{CHAPTER 11 Limits,Continuity and Differentiability}\\
+Section-A JEE Advanced/IIT JEE\\
+
+\section*{A  Fill in the Blanks}
+\begin{enumerate}
+\item  Let $f(x)=\{(x-1)^2\sin\frac{1}{(x-1)}-|x|  if x\neq1 \\ -1 if x=1\}$\\ be a real-valued function. Then the set of points where f(x) is not differentiable is.........\hfill (1981-2marks)\\ 
+
+\item Let $f(x)=\{\frac{(x^3+x^2-16x+20)}{(x-2)^2}, if x\neq2\\ k, if x=2\}$\\If f(x) is continuous for all x,then k=........\hfill (1981-2 marks)\\
+
+\item A discontinuous function y=f(x) satisfying $x^2+y^2=4$ is given by f(x)=.........\hfill (1982-2 marks)\\
+
+\item $\lim \limits_{x \to -\infty}(1-x)\tan\frac{\pi x}{2}=........$\hfill (1982-2marks)\\
+
+\item If $f(x)=\sin x,x\neq n\pi,n=0,\pm 1,\pm 2,\pm 3\\=2 otherwise \\ and g(x)=x^2+1,x\neq0,2\\=4,x=0\\=5,x=2\\ then \lim \limits_{x \to 0}g[f(x)] is........ \hfill (1986-2marks)$\\
+
+\item $\lim \limits_{x \to -\infty} [\frac{x^4 \sin (\frac{1}{x})+x^2}{(1+|x|^3)}]=.......\hfill     (1987-2marks)$\\
+
+\item If f(9)=9, f'(9)=4 $\lim \limits_{x \to 9} \frac{\sqrt{f(x)}-3}{\sqrt{x}-3}$ equals..........\hfill (1988-2marks)\\
+
+\item ABC is an isosceles triangle inscribed in a circle of radius r. If AB=AC and h is altitude from A to BC then the triangle has perimeter ${P=2(\sqrt{2hr-h^2})+\sqrt{2hr}}$ and A is ........ also $\lim \limits_{h \to 0} \frac{A}{P^3}=..........\hfill (1982-2marks)$\\
+
+\item $L\text{t}_{x \to \infty} (\frac{x+6}{x+1})^(x+4)=...........$ \hfill (1990-2marks)\\
+
+\item Let $f(x)=x|x|$. The set of all points where f(x) is twice differentiable is.......\hfill (1992-2marks)\\
+
+\item Let $f(x)=[x] \sin\frac{\pi}{[x+1]}$, where [.] denotes greatest integer function. The domain of f is...... and the points of discontinuity of f in domain are.......\hfill (1996-2marks)\\
+
+\item $\lim \limits_{x \to 0} (\frac{1+5x^2}{1+3x^2})^\frac{1}{x^2}=............\hfill (1996-2marks)$\\
+
+\item Let f(x) be a continuous function defined for $1\leq x \leq 3$. If f(x) takes rational values for all x and f(2)=10 then f(1.5)=.........\hfill (1997-2marks)\\
+\end{enumerate}
+
+\section*{B True/False}
+\begin{enumerate}
+    \item $L\text{t}_{x \to a} [f(x)g(x)]$ exists then both $L\text{t}_{x \to a} f(x)$ and $L\text{t}_{x \to a} g(x)$ exist.\hfill (1981-2marks)\\
+\end{enumerate}
+
+
+\section*{C MCQs with One Correct Answer}
+\begin{enumerate}
+\item If $f(x)=\sqrt{\frac{x-\sin x}{x+\cos^2 x}}$ \hfill (1979)
+\begin{enumerate}
+    \item 0
+    \item 1
+    \item $\infty$
+    \item none of these
+\end{enumerate}
+\end{enumerate}
+\end{document}
+\end{document}
