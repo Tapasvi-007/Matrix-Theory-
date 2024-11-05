@@ -1,30 +1,32 @@
-import numpy as np
 import matplotlib.pyplot as plt
-import os
 
-# Load the points from the text file
-points = np.loadtxt("line_points.txt", delimiter=',', max_rows=len(list(open("./triangle_points.txt")))-1)
+# Points A, B, and P
+A = (4, 4)  # A(4, 4)
+B = (-2, 6) # B(-2, 6)
+P = (1, 5)  # Midpoint P(1, 5)
 
-# Extract the x and y coordinates
-x = points[:, 0]
-y = points[:, 1]
-A = np.array([4, 4]).reshape(-1,1)
-P = np.array([1, 5]).reshape(-1,1)
-B = np.array([-2, 6]).reshape(-1,1)
-plt.figure()
-plt.plot(x, y, label='PR', linestyle='-', color='blue')
+# Create the plot
+plt.figure(figsize=(8, 6))
+plt.plot(*A, 'ro', label='Point A (4, 4)')
+plt.plot(*B, 'bo', label='Point B (-2, 6)')
+plt.plot(*P, 'go', label='Midpoint P (1, 5)')
 
-tri_coords = np.block([A,P,B])  
-plt.scatter(tri_coords[0,:], tri_coords[1, :])
-vert_labels = ['A','P','B'];
-for i, txt in enumerate(vert_labels):
-    # Annotate each point with its label and coordinates
-    plt.text(tri_coords[0, i], tri_coords[1, i], f'{txt}\n({tri_coords[0, i]:.0f}, {tri_coords[1, i]:.0f})',
-             fontsize=12, color = 'black', ha='center', va='bottom')
-plt.xlabel("x")
-plt.ylabel("y")
-plt.title("plot of points A,P,B")
-plt.grid(True)
+# Draw the line segment
+plt.plot([A[0], B[0]], [A[1], B[1]], 'k--', label='Line segment AB')
+
+# Adding annotations
+plt.text(A[0], A[1], ' A (4, 4)', fontsize=10, verticalalignment='bottom')
+plt.text(B[0], B[1], ' B (-2, 6)', fontsize=10, verticalalignment='bottom')
+plt.text(P[0], P[1], ' P (1, 5)', fontsize=10, verticalalignment='bottom')
+
+# Set the limits and labels
+plt.xlim(-3, 5)
+plt.ylim(0, 7)
+plt.axhline(0, color='black',linewidth=0.5, ls='--')
+plt.axvline(0, color='black',linewidth=0.5, ls='--')
+plt.grid()
+plt.title('Points A, B, and Midpoint P')
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
 plt.legend()
 plt.show()
-
