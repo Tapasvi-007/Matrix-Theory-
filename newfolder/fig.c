@@ -29,7 +29,7 @@ int main() {
     int m = 2, n = 1;
     double **A = createMat(m, n);
     double **B = createMat(m, n);
-    double **C = createMat(m, n);
+    double **M = createMat(m, n);
     A[0][0] = x1;
     A[1][0] = y1;
     B[0][0] = x2;
